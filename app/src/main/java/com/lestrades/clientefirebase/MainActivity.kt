@@ -162,7 +162,4 @@ class MainActivity : AppCompatActivity(),  OnProductLisener{
         TODO("Not yet implemented")
     }
 
-    override fun onLongClick(product: Product) {
-        TODO("Not yet implemented")
-    }
 }
