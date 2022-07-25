@@ -15,6 +15,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentChange
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ListenerRegistration
+import com.lestrades.clientefirebase.cart.CartFragment
 import com.lestrades.clientefirebase.databinding.ActivityMainBinding
 import com.lestrades.clientefirebase.entities.Product
 import com.lestrades.clientefirebase.product.OnProductLisener
@@ -62,6 +63,7 @@ class MainActivity : AppCompatActivity(),  OnProductLisener{
         setContentView(binding.root)
         configAuth()
         configRecyclerView()
+        configButtons()
     }
 
 
@@ -111,6 +113,14 @@ class MainActivity : AppCompatActivity(),  OnProductLisener{
             adapter = this@MainActivity.adapter
         }
     }
+    private fun configButtons(){
+        binding.btnViewCart.setOnClickListener {
+            val fragment = CartFragment()
+            fragment.show(supportFragmentManager.beginTransaction(),CartFragment::class.java.simpleName)
+
+        }
+    }
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
         return super.onCreateOptionsMenu(menu)
@@ -136,6 +146,7 @@ class MainActivity : AppCompatActivity(),  OnProductLisener{
         }
         return super.onOptionsItemSelected(item)
     }
+
     private fun configFirestoreRealtime() {
         val db = FirebaseFirestore.getInstance()
         val productRef = db.collection(Constants.COLL_PRODUCTS)

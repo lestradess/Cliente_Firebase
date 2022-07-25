@@ -41,7 +41,7 @@
         android:id="@+id/imgProduct"
         android:layout_width="@dimen/product_cart_image_size"
         android:layout_height="@dimen/product_cart_image_size"
-        android:background="@color/Yellow"
+        android:background="@color/colorSecundary"
         android:layout_marginStart="@dimen/common_padding_min"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -8,8 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="colorPrimary">@color/Yellow</color>
-    <color name="colorSecundary">@color/Marron_Dark</color>
+    <color name="colorPrimary">@color/Marron_Dark</color>
+    <color name="colorSecundary">@color/Yellow</color>
 
     <color name="Marron">#4e342e</color>
     <color name="Marron_Light">#7c5e56</color>
